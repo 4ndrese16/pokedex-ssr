@@ -1,0 +1,240 @@
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+  }
+
+  .pokedex-header{
+    display: flex;
+    justify-content: center;
+    background-color: #b63e3e;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 100px;
+  }
+
+  .display-pokedex{
+    display: flex;
+    background-color: #8f7d7d;
+    height: calc(100vh - 100px);
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+  }
+
+  .navbar{
+    display: flex;
+    justify-content: center;
+    background-color: #332f2f;
+    color: whitesmoke;
+  }
+
+  .search-box{
+    padding: 20px;
+  }
+
+  #btn-search{
+    color: whitesmoke;
+    font-weight: bold;
+    background-color: #b63e3e;
+    border-color: whitesmoke;
+    border-radius: 10px;
+  }
+
+  #input-search-pkmn{
+    background-color: whitesmoke;
+    color: #332f2f;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    border-radius: 10px;
+    border-color: #332f2f;
+  }
+
+  .left-side{
+    width: 800px;
+    border: 1px solide white;
+    text-align: center;
+  }
+
+  .poke-main-info{
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    width: 400px;
+    margin: 30px 80px;
+    padding: 25px;
+    border-radius: 100px;
+    opacity: 0;
+    transition: opacity .5s;
+  }
+
+  .pkmn-name{
+    font-size: 40px;
+    margin: 20px 0;
+    color:#bd0000;
+    text-transform: capitalize;
+  }
+
+  .pkmn-sprites{
+      display: flex;
+      justify-content: space-around;
+      margin: 10px;
+  }
+
+  .pkmn-sprites div{
+    display: flex;
+    flex-direction: column;
+}
+
+  .pkmn-sprites h3{
+    font-size: 15px;
+    color: whitesmoke;
+    border-radius: 15px;
+    padding: 5px;
+    text-align: center;
+  }
+
+  .normal-sprite h3{
+    background-color: #8f7d7d;
+  }
+
+  .shiny-sprite h3{
+    background-color: #b63e3e;
+  }
+
+  .pkmn-types{
+    margin: 5px;
+    color: #332f2f;
+  }
+
+  .type{
+    border-radius: 15px;
+    padding: 4px;
+    color: whitesmoke;
+    text-transform: capitalize;
+  }
+
+  .pkmn-abilities{
+    margin: 5px 0;
+    color: #332f2f;
+    padding: 5px;
+  }
+
+  .pkmn-abilities{
+    margin: 15px;
+  }
+
+  .ability{
+    border-radius: 15px;
+    padding: 5px;
+    color: whitesmoke;
+    text-transform: capitalize;
+  }
+
+  .normal-ability{
+    margin: 15px;
+    background-color: #8f7d7d;
+  }
+
+  .hidden-ability{
+    margin: 15px; 
+    background-color: #b63e3e;
+  }
+
+  .pokedex-list {
+    background-color: #332f2f;
+    height: 462px;
+    overflow: auto;
+    margin: 30px 110px 30px 0;
+    padding: 5px 25px;
+    border-radius: 20px;
+  }
+
+  .display-list li{
+    border: 2px solid #8f7d7d;
+    background-color: #b63e3e;
+    padding: 3px;
+    border-radius: 10px;
+    text-align: justify;
+    color: whitesmoke;
+    margin: 5px 0;
+    text-transform: capitalize;
+    cursor: pointer;
+
+  }
+
+  .display-list li a{
+    color: whitesmoke;
+    text-decoration: none;
+    width: 100%;
+  }
+
+  .bug{
+    background-color: rgb(146, 173, 25);
+  }
+
+  .dark{
+    background-color: rgb(49, 42, 34);
+  }
+
+  .dragon{
+    background-color: rgb(50, 8, 202);
+  }
+
+  .electric{
+    background-color: rgb(221, 224, 1);
+  }
+
+  .fairy{
+    background-color: rgb(236, 152, 191);
+  }
+
+  .fighting{
+    background-color: rgb(141, 0, 0);
+  }
+
+  .fire{
+    background-color: rgb(255, 102, 0);
+  }
+
+  .flying{
+    background-color: rgb(148, 182, 255);
+  }
+
+  .ghost{
+    background-color: rgb(42, 1, 119);
+  }
+
+  .grass{
+    background-color: rgb(100, 204, 79);
+  }
+
+  .ground{
+    background-color: rgb(168, 160, 44);
+  }
+
+  .ice{
+    background-color: rgb(95, 224, 203);
+  }
+
+  .normal{
+    background-color: rgb(144, 150, 112);
+  }
+
+  .poison{
+    background-color: rgb(115, 36, 131);
+  }
+
+  .psychic{
+    background-color: rgb(230, 19, 100);
+  }
+
+  .rock{
+    background-color: rgb(146, 113, 43);
+  }
+
+  .steel{
+    background-color: rgb(180, 180, 180);
+  }
+
+  .water{
+    background-color: rgb(21, 139, 194);
+  }

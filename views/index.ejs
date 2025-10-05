@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+
+<body>
+    <div class="main-pokedex-container">
+        <div class="pokedex-header">
+            <img src="/images/pokedex_logo.png" alt="Pokedex">
+        </div>
+        <div class="navbar">
+            <h4>Search by name or pokedex number:</h4>
+            <div class="search-box">
+                <input type="text" name="search" id="input-search-pkmn" placeholder="Search a Pokemon">
+                <button id="btn-search">Search</button>
+            </div>
+        </div>
+        <div class="display-pokedex">
+            <div class="pokedex-list">
+                <ol class="display-list">
+                    <% pokemons.forEach(pokemon=> { %>
+                        <li>
+                            <a href="/pokemon/<%= pokemon.name %>">
+                                <%= pokemon.name %>
+                            </a>
+                        </li>
+                        <% }) %>
+
+
+                </ol>
+            </div>
+            <div class="pkmn-info">
+                
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

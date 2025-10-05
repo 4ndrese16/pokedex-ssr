@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        <%= pokemon.name %> | Pokédex
+    </title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+
+<body>
+    <a href="/">← Volver</a>
+    <h1 class="pkmn-name">
+        <%= pokemon.name %> (#<%= pokemon.id %>)
+    </h1>
+
+    <div class="pkmn-sprites">
+        <div class="normal-sprite">
+            <h3>Normal</h3>
+            <img src="<%= pokemon.sprites.front_default %>" alt="<%= pokemon.name %>">
+        </div>
+        <div class="shiny-sprite">
+            <h3>Shiny</h3>
+            <img src="<%= pokemon.sprites.front_shiny %>" alt="<%= pokemon.name %>">
+        </div>
+    </div>
+
+    <div class="pkmn-types">
+        <% if (pokemon.types.length == 1) { %>
+            <h3>Type:</h3>
+            <% } else { %>
+                <h3>Types:</h3>
+                <% } %>
+                    <% pokemon.types.forEach(type=> { %>
+                        <span class="type <%= type.type.name %>">
+                            <%= type.type.name %>
+                        </span>
+                        <% }) %>
+
+    </div>
+
+    <div class="pkmn-abilities">
+        <% if (pokemon.abilities.length==1) { %>
+            <h3>Ability:</h3>
+            <span class="ability normal-ability">
+                <%= pokemon.abilities[0].ability.name.replace(/-/g, ' ') %>
+            </span>
+            <% } else if (pokemon.abilities.length==2) { %>
+                <h3>Abilities:</h3>
+                <span class="ability normal-ability">
+                    <%= pokemon.abilities[0].ability.name.replace(/-/g, ' ') %>
+                </span>
+                <span class="ability hidden-ability">
+                    <%= pokemon.abilities[1].ability.name.replace(/-/g, ' ') %>
+                </span>
+                <% } else { %>
+                    <h3>Abilities:</h3>
+                    <span class="ability normal-ability">
+                        <%= pokemon.abilities[0].ability.name.replace(/-/g, ' ') %>
+                    </span>
+                    <span class="ability normal-ability">
+                        <%= pokemon.abilities[1].ability.name.replace(/-/g, ' ') %>
+                    </span>
+                    <span class="ability hidden-ability">
+                        <%= pokemon.abilities[2].ability.name.replace(/-/g, ' ') %>
+                    </span>
+                    <% } %>
+    </div>
+</body>
+
+</html>
