@@ -18,6 +18,7 @@ document.querySelectorAll(".btn-pkmn-link").forEach(btn => {
 
 async function fetchPokemon(query) {
     infoDiv.innerHTML = "<p>Cargando...</p>";
+    infoDiv.style.textAlign = "center";
     try {
         const res = await fetch(`/pokemon/${query}`);
         if (!res.ok) throw new Error();

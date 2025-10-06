@@ -7,25 +7,26 @@ body{
 
   .main-pokedex-container{
     width: 90%;
-    height: 100vh;
+    height: 90vh;
   }
 
   .pokedex-header{
     display: flex;
     justify-content: center;
     background-color: #b63e3e;
-    border-top-right-radius: 10rem;
-    border-top-left-radius: 10rem;
+    border-top-right-radius: 7rem;
+    border-top-left-radius: 7rem;
   }
 
   .display-pokedex{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     background-color: #8f7d7d;
     height: 80%;
-    border-bottom-right-radius: 10rem;
-    border-bottom-left-radius: 10rem;
-
+    border-bottom-right-radius: 7rem;
+    border-bottom-left-radius: 7rem;
+    padding-top: 5rem;
   }
 
   .navbar{
@@ -61,14 +62,26 @@ body{
     display: flex;
     flex-direction: column;
     background-color: whitesmoke;
+    width: 45%;
+    height: 80%;
+    border-radius: 5rem;
     transition: background-color 0.3s ease;
   }
 
+  .pkmn-info p{
+    text-align: center;
+    font-size: 1.5rem;
+    color: #332f2f;
+    margin-top: 15rem;
+    text-transform: initial;
+  }
+
   .pkmn-name{
-    font-size: 40px;
-    margin: 20px 0;
+    font-size: 3rem;
+    margin: 2rem 0;
     color:#bd0000;
     text-transform: capitalize;
+    text-align: center;
   }
 
   .pkmn-sprites{
@@ -83,11 +96,15 @@ body{
 }
 
   .pkmn-sprites h3{
-    font-size: 15px;
+    font-size: 1rem;
     color: whitesmoke;
-    border-radius: 15px;
-    padding: 5px;
+    border-radius: 1rem;
+    padding: 0.5rem;
     text-align: center;
+  }
+
+  .pkmn-sprites img{
+    width: 10rem;
   }
 
   .normal-sprite h3{
@@ -99,58 +116,60 @@ body{
   }
 
   .pkmn-types{
-    margin: 5px;
+    margin: 0.5rem;
     color: #332f2f;
+    text-align: center;
   }
 
   .type{
-    border-radius: 15px;
-    padding: 4px;
+    border-radius: 1rem;
+    padding: 0.5rem;
     color: whitesmoke;
     text-transform: capitalize;
+    margin: 0 0.5rem;
   }
 
   .pkmn-abilities{
-    margin: 5px 0;
+    margin: 0.5rem 0;
     color: #332f2f;
-    padding: 5px;
+    padding: 0.5rem;
   }
 
   .pkmn-abilities{
-    margin: 15px;
+    margin: 1rem;
+    text-align: center;
   }
 
   .ability{
-    border-radius: 15px;
+    border-radius: 1rem;
     padding: 5px;
     color: whitesmoke;
     text-transform: capitalize;
+    margin: 1rem 0.5rem;
   }
 
   .normal-ability{
-    margin: 15px;
     background-color: #8f7d7d;
   }
 
   .hidden-ability{
-    margin: 15px; 
     background-color: #b63e3e;
   }
 
   .pokedex-list {
     background-color: #332f2f;
-    height: 462px;
+    height: 75%;
     overflow: auto;
-    margin: 30px 110px 30px 0;
-    padding: 5px 25px;
+    padding: 0.5rem 2rem;
     border-radius: 20px;
+    scrollbar-color: #b63e3e #332f2f;
   }
 
   .display-list li{
     border: 2px solid #8f7d7d;
     background-color: #b63e3e;
-    padding: 3px;
-    border-radius: 10px;
+    padding: 0.5rem;
+    border-radius: 1rem;
     text-align: justify;
     color: whitesmoke;
     margin: 5px 0;
