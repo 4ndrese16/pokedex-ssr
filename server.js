@@ -37,7 +37,7 @@ app.get('/pokemon/:query', async (req, res) => {
     if (!response.ok) throw new Error('Pokémon no encontrado');
 
     const pokemon = await response.json();
-    res.render('pokemon', { pokemon });
+    res.render('partials/pokemon-details', { pokemon });
   } catch (error) {
     res.status(404).send('Pokémon no encontrado');
   }
