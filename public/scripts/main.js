@@ -17,7 +17,7 @@ document.querySelectorAll(".btn-pkmn-link").forEach(btn => {
 });
 
 async function fetchPokemon(query) {
-    infoDiv.innerHTML = "<p>Cargando...</p>";
+    infoDiv.innerHTML = "<p>Loading...</p>";
     infoDiv.style.textAlign = "center";
     try {
         const res = await fetch(`/pokemon/${query}`);
@@ -25,6 +25,6 @@ async function fetchPokemon(query) {
         const html = await res.text();
         infoDiv.innerHTML = html; // ← Insertamos el partial renderizado
     } catch {
-        infoDiv.innerHTML = "<p>Pokémon no encontrado ⚠️</p>";
+        infoDiv.innerHTML = "<p>Pokémon not found ⚠️</p>";
     }
 }
