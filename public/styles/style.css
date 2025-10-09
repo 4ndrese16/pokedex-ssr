@@ -1,182 +1,204 @@
-body{
+body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
     display: flex;
     justify-content: center;
-  }
+}
 
-  .main-pokedex-container{
-    width: 90%;
-    height: 90vh;
-  }
+.main-pokedex-container {
+    width: 98%;
+    height: 85vh;
+}
 
-  .pokedex-header{
+.pokedex-header {
     display: flex;
     justify-content: center;
     background-color: #b63e3e;
-    border-top-right-radius: 7rem;
-    border-top-left-radius: 7rem;
-  }
+    border-top-right-radius: 2rem;
+    border-top-left-radius: 2rem;
+}
 
-  .display-pokedex{
+.pokedex-header img {
+    width: 15rem;
+    height: auto;
+}
+
+.display-pokedex {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
     background-color: #8f7d7d;
-    height: 80%;
-    border-bottom-right-radius: 7rem;
-    border-bottom-left-radius: 7rem;
-    padding-top: 5rem;
-  }
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    padding: 2rem 0;
+}
 
-  .navbar{
+.navbar {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+    text-align: center;
     background-color: #332f2f;
     color: whitesmoke;
-  }
+}
 
-  .search-box{
+.search-box {
     padding: 1.25rem;
-  }
+}
 
-  #btn-search{
+#btn-search {
     color: whitesmoke;
     font-weight: bold;
     background-color: #b63e3e;
     border-color: whitesmoke;
     border-radius: 1rem;
-  }
+}
 
-  #input-search-pkmn{
+#input-search-pkmn {
     background-color: whitesmoke;
     color: #332f2f;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
     border-radius: 1rem;
     border-color: #332f2f;
-  }
+}
 
-  .pkmn-info{
+.pkmn-info {
     text-transform: capitalize;
     display: flex;
     flex-direction: column;
     background-color: whitesmoke;
-    width: 45%;
+    width: 90%;
+    max-width: 25rem;
     height: 80%;
-    border-radius: 5rem;
+    border-radius: 2rem;
     transition: background-color 0.3s ease;
-  }
+}
 
-  .pkmn-info p{
+.pkmn-info p {
     text-align: center;
     font-size: 1.5rem;
     color: #332f2f;
-    margin-top: 15rem;
+    margin: 3rem;
     text-transform: initial;
-  }
+}
 
-  .pkmn-name{
-    font-size: 3rem;
+.pkmn-name {
+    font-size: 2rem;
     margin: 2rem 0;
-    color:#bd0000;
+    color: #bd0000;
     text-transform: capitalize;
     text-align: center;
-  }
+}
 
-  .pkmn-sprites{
-      display: flex;
-      justify-content: space-around;
-      margin: 1rem;
-  }
+.pkmn-sprites {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+}
 
-  .pkmn-sprites div{
+.pkmn-sprites div {
     display: flex;
     flex-direction: column;
 }
 
-  .pkmn-sprites h3{
+.pkmn-sprites h3 {
     font-size: 1rem;
     color: whitesmoke;
     border-radius: 1rem;
     padding: 0.5rem;
     text-align: center;
-  }
+}
 
-  .pkmn-sprites img{
+.pkmn-sprites img {
     width: 10rem;
-  }
+}
 
-  .normal-sprite h3{
+.normal-sprite h3 {
     background-color: #8f7d7d;
-  }
+}
 
-  .shiny-sprite h3{
+.shiny-sprite h3 {
     background-color: #b63e3e;
-  }
+}
 
-  .pkmn-types{
+.pkmn-types {
     margin: 0.5rem;
     color: #332f2f;
     text-align: center;
-  }
+}
 
-  .type{
+.type {
     border-radius: 1rem;
     padding: 0.5rem;
     color: whitesmoke;
     text-transform: capitalize;
     margin: 0 0.5rem;
-  }
+}
 
-  .pkmn-abilities{
+.pkmn-abilities {
     margin: 0.5rem 0;
     color: #332f2f;
     padding: 0.5rem;
-  }
-
-  .pkmn-abilities{
-    margin: 1rem;
     text-align: center;
-  }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
 
-  .ability{
+.ability {
     border-radius: 1rem;
     padding: 5px;
     color: whitesmoke;
     text-transform: capitalize;
     margin: 1rem 0.5rem;
-  }
+}
 
-  .normal-ability{
+.normal-ability {
     background-color: #8f7d7d;
-  }
+}
 
-  .hidden-ability{
+.hidden-ability {
     background-color: #b63e3e;
-  }
+}
 
-  .pokedex-list {
+.abilities-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.pokedex-list {
     background-color: #332f2f;
-    height: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 20rem;
+    width: 90%;
+    max-width: 25rem;
     overflow: auto;
-    padding: 0.5rem 2rem;
-    border-radius: 20px;
+    border-radius: 1.5rem;
     scrollbar-color: #b63e3e #332f2f;
-  }
+}
 
-  .display-list li{
+.display-list li {
     border: 2px solid #8f7d7d;
     background-color: #b63e3e;
     padding: 0.5rem;
     border-radius: 1rem;
-    text-align: justify;
     color: whitesmoke;
     margin: 5px 0;
     cursor: pointer;
-  }
+    width: 8rem;
+    height: auto;
+}
 
-  .display-list li button{
+.display-list li button {
     color: whitesmoke;
     text-decoration: none;
     background: none;
@@ -185,76 +207,134 @@ body{
     font-weight: bold;
     text-transform: capitalize;
     cursor: pointer;
-  }
+    text-align: left;
+}
 
-  .bug{
+.bug {
     background-color: rgb(146, 173, 25);
-  }
+}
 
-  .dark{
+.dark {
     background-color: rgb(49, 42, 34);
-  }
+}
 
-  .dragon{
+.dragon {
     background-color: rgb(50, 8, 202);
-  }
+}
 
-  .electric{
+.electric {
     background-color: rgb(221, 224, 1);
-  }
+}
 
-  .fairy{
+.fairy {
     background-color: rgb(236, 152, 191);
-  }
+}
 
-  .fighting{
+.fighting {
     background-color: rgb(141, 0, 0);
-  }
+}
 
-  .fire{
+.fire {
     background-color: rgb(255, 102, 0);
-  }
+}
 
-  .flying{
+.flying {
     background-color: rgb(148, 182, 255);
-  }
+}
 
-  .ghost{
+.ghost {
     background-color: rgb(42, 1, 119);
-  }
+}
 
-  .grass{
+.grass {
     background-color: rgb(100, 204, 79);
-  }
+}
 
-  .ground{
+.ground {
     background-color: rgb(168, 160, 44);
-  }
+}
 
-  .ice{
+.ice {
     background-color: rgb(95, 224, 203);
-  }
+}
 
-  .normal{
+.normal {
     background-color: rgb(144, 150, 112);
-  }
+}
 
-  .poison{
+.poison {
     background-color: rgb(115, 36, 131);
-  }
+}
 
-  .psychic{
+.psychic {
     background-color: rgb(230, 19, 100);
-  }
+}
 
-  .rock{
+.rock {
     background-color: rgb(146, 113, 43);
-  }
+}
 
-  .steel{
+.steel {
     background-color: rgb(180, 180, 180);
-  }
+}
 
-  .water{
+.water {
     background-color: rgb(21, 139, 194);
-  }
+}
+
+@media (min-width: 375px) {
+    .abilities-container {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 768px) {
+    .display-pokedex {
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: #8f7d7d;
+        padding: 0 1rem;
+        height: 90%;
+    }
+
+    .pokedex-header img {
+        width: 22rem;
+    }
+
+    .navbar {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .pokedex-list {
+        height: 75%;
+        width: 45%;
+    }
+
+    .pkmn-info {
+        max-width: 50rem;
+        padding: 1rem 0;
+        overflow: auto;
+    }
+
+    .pkmn-info p {
+        font-size: 2rem;
+        margin-top: 17rem;
+    }
+
+    .pkmn-name {
+        font-size: 3rem;
+    }
+
+    .pkmn-sprites {
+        flex-direction: row;
+        gap: 2rem;
+        justify-content: space-around;
+    }
+}
+
+@media (min-width: 1024px) {
+    .pkmn-sprites img {
+        width: 13rem;
+    }
+}
