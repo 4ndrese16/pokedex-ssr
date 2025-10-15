@@ -21,19 +21,43 @@
             </form>
         </div>
         <div class="display-pokedex">
+
+
             <div class="pokedex-list">
+                <div class="display-options">
+                    <input type="radio" name="display-pokedex" id="list-view" checked>
+                    <label for="list-view"><img src="/icons/align-justify-svgrepo-com.svg" alt="List"></label>
+                    <input type="radio" name="display-pokedex" id="mosaic-view">
+                    <label for="mosaic-view"><img src="/icons/grid-svgrepo-com.svg" alt="Mosaic"></label>
+                </div>
                 <ol class="display-list">
                     <% pokemons.forEach(pokemon=> { %>
                         <li>
                             <button class="btn-pkmn-link" data-pkmn="<%= pokemon.name %>">
-                                <%= pokemon.name.replace(/-/g, ' ') %>
-                            </a>
+                                <%= pokemon.name.replace(/-/g, ' ' ) %>
+                            </button>
                         </li>
                         <% }) %>
-
-
                 </ol>
+                <div class="display-mosaic hidden">
+                    <% pokemons.forEach(pokemon=> {
+                        const parts = pokemon.url.split('/').filter(Boolean);
+                        const id = parts[parts.length - 1];
+                        %>
+                        <div class="mosaic-pkmn">
+                            <button class="btn-pkmn-link" data-pkmn="<%= pokemon.name %>">
+                                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/<%= id %>.png"
+                                    alt="<%= pokemon.name %>">
+                                <span class="mosaic-pkmn-name">
+                                    <%= id %>. <%= pokemon.name.replace(/-/g, ' ' ) %>
+                                </span>
+                            </button>
+                        </div>
+                        <% }) %>
+                </div>
             </div>
+
+
             <div class="pkmn-info">
                 <p>Select a Pokémon or search one</p>
             </div>
